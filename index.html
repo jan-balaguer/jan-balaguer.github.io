@@ -1,1 +1,260 @@
-Hello World
+<!-- Based on Jan Untreefolio, see https://untree.co/ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Jan Balaguer">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <!-- Mobile menu. -->
+    <nav class="unslate_co--site-mobile-menu">
+      <div class="close-wrap d-flex">
+        <a href="#" class="d-flex ml-auto js-menu-toggle">
+          <span class="close-label">Close</span>
+          <div class="close-times">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+          </div>
+        </a>
+      </div>
+      <div class="site-mobile-inner"></div>
+    </nav>
+
+    <!-- Site. -->
+    <div class="unslate_co--site-wrap">
+      <div class="unslate_co--site-inner">
+
+      <!-- Menu. -->
+      <nav class="unslate_co--site-nav site-nav-target">
+        <div class="container">
+          <div class="row align-items-center justify-content-between text-center">
+            <div class="col-md-5 text-right">
+              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#timeline-section" class="nav-link">Timeline</a></li>
+              </ul>
+            </div>
+            <div class="col-md-5 text-right text-lg-left">
+              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li><a href="#research-section" class="nav-link">Research</a></li>
+              </ul>
+              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
+                <li><a href="#" class="js-menu-toggle">Menu</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Cover. -->
+      <div class="cover-v1 jarallax bg-light" id="home-section">
+        <div class="container">
+          <div class="row align-items-center">
+              
+            <div class="col-md-8 mx-auto text-center">
+              <h1 class="heading gsap-reveal-hero">Jan Balaguer</h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- About section. -->
+      <div class="unslate_co--section" id="about-section">
+        <div class="container">
+          <div class="row mt-5 justify-content-between align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0" data-aos="fade-up">
+              <figure class="dotted-bg">
+                <img src="images/jan_balaguer.jpg" alt="Image" class="img-fluid">
+              </figure>
+            </div>
+            <div class="col-lg-5 pl-lg-5" data-aos="fade-up"  data-aos-delay="100">
+              <h3 class="mb-4 heading-h3">About me</h3>
+              <ul class="list-unstyled list-check d-block">
+                <li class="d-block">I am Staff Research Engineer at DeepMind.</li>
+                <li class="d-block">My research spans machine learning, neuroscience, psychology and economics.</li>
+                <li class="d-block">I am native Spanish, fluent in English and French, and practice Catalan with my niece every so often.</li>
+                <li class="d-block">I have a 1-year-old son, Elie.</li>
+                <li class="d-block">I obsess with anything ... maths, programming, novels, music, photography, investing, macroeconomics, blockchain, videogames, and recently 3d modelling.</li>
+              </ul>
+              <h4 class="mb-4 heading-h4">Contact</h4>
+              <div class="contact-info-v1">
+                <p><span class="contact-info-label">jdobalaguer [at] gmail [dot] com</span></p>
+                <p><span class="contact-info-label">jan [at] deepmind [dot] com</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline section. -->
+      <div class="unslate_co--section" id="timeline-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5"  data-aos="fade-up">
+            <h2 class="heading-h2 text-center divider">Timeline</h2>
+          </div>
+          <div class="col-md-8 mx-auto text-center">
+            <img src="images/timeline.svg" alt="Image" class="img-fluid" width="80%">
+          </div>
+        </div>
+      </div>
+
+      <!-- Research section. -->
+      <div class="unslate_co--section" id="research-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
+            <h2 class="heading-h2 text-center divider">Research</h2>
+          </div>
+          <div class="relative"><div class="loader-research-wrap"><div class="loader-research"></div></div> </div>
+          <div id="research-single-holder"></div>
+          <div class="research-wrapper">
+            <div id="posts" class="row gutter-isotope-item">
+              
+              <!-- Thesis. -->
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="https://ora.ox.ac.uk/objects/uuid:a00e2943-ba63-42de-9bcb-37732d9db3a1" class="research-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>Thesis</h3>
+                        <p>ORA, 2018</p>
+                      </div>
+                    </div>
+                    <img src="images/research/thesis.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              
+              <!-- Subway. -->
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="https://www.cell.com/neuron/fulltext/S0896-6273(16)30057-5" class="research-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>Subway</h3>
+                        <p>Neuron, 2016</p>
+                      </div>
+                    </div>
+                    <img src="images/research/subway.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              
+              <!-- Democratic AI. -->
+              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+                <a href="https://www.nature.com/articles/s41562-022-01383-x" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>Democratic AI</h3>
+                        <p>Nature Human Behaviour, 2022</p>
+                      </div>
+                    </div>
+                    <img src="images/research/democratic_ai.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              
+              <!-- PonderNet. -->
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="https://arxiv.org/abs/2107.05407" class="research-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>PonderNet</h3>
+                        <p>arXiv, 2021</p>
+                      </div>
+                    </div>
+                    <img src="images/research/pondernet.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              
+              <!-- Good Shepherd. -->
+              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+                <a href="https://arxiv.org/abs/2202.10135" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>Good Shepherd</h3>
+                        <p>arXiv, 2022</p>
+                      </div>
+                    </div>
+                    <img src="images/research/good_shepherd.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              
+              <!-- Boring task. -->
+              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+                <a href="https://www.cell.com/neuron/fulltext/S0896-6273(16)31011-X" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>Boring task</h3>
+                        <p>Neuron, 2017</p>
+                      </div>
+                    </div>
+                    <img src="images/research/boring_task.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+              
+              <!-- Prospect theory optimality. -->
+              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+                <a href="https://www.pnas.org/doi/full/10.1073/pnas.2002232118" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="research-item-content">
+                        <h3>Prospect theory optimality</h3>
+                        <p>PNAS, 2020</p>
+                      </div>
+                    </div>
+                    <img src="images/research/prospect_theory_optimality.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- End of site. -->
+    </div> 
+
+    <!-- Footer with copyright. -->
+    <footer class="unslate_co--footer unslate_co--section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div class="footer-site-logo"><a href="#">Jan Balaguer<span>.</span></a></div>
+            <ul class="list-unstyled social-icons light">
+              <li><a href="https://www.linkedin.com/in/jan-balaguer-93474a164"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://enjoyedthesilence.wordpress.com"><span class="icon-wordpress"></span></a></li>
+              <li><a href="https://scholar.google.com/citations?user=88xDcnoAAAAJ"><span class="icon-graduation-cap"></span></a></li>
+              <li><a href="https://github.com/jan-balaguer"><span class="icon-github"></span></a></li>
+            </ul>
+            <p class="site-copyright"><small>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ --> </small></p>
+            <p class="site-copyright"><small>Images (except mine) are under <a href="https://pixabay.com/service/license/">Pixabay License</a>.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="unslate_co--overlayer"></div>
+    <div class="site-loader-wrap">
+      <div class="site-loader"></div>
+    </div>
+
+    <script src="js/scripts-dist.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
