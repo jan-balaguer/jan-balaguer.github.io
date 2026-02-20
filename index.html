@@ -1,260 +1,239 @@
-<!-- Based on Jan Untreefolio, see https://untree.co/ -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Jan Balaguer">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Balaguer</title>
     <link rel="shortcut icon" href="favicon.png">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
-    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/vendor/animate.min.css">
-    <link rel="stylesheet" href="css/vendor/aos.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+    <style>
+        :root {
+            --text-color: #111;
+            --border-color: #eee;
+            --bg-color: #fff;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            font-size: 0.95rem;
+        }
+        
+        /* Header */
+        header {
+            margin-top: 120px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        header img {
+            max-width: 120px;
+            height: auto;
+            filter: grayscale(50%);
+        }
+        
+        /* Sections */
+        section {
+            padding-top: 40px;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            font-family: monospace;
+            margin-top: 25px;
+        }
+        .contact-info p {
+            margin: 0 0 5px 0;
+        }
+        
+        /* Research List */
+        .research-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .research-list li {
+            margin-bottom: 15px;
+        }
+        .research-list a {
+            font-weight: normal;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: left;
+            padding: 30px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        footer p {
+            margin: 0;
+        }
+        
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            padding: 0;
+            margin: 0 0 15px 0;
+            list-style: none;
+        }
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            background-color: #333;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+        .social-icons a:hover {
+            background-color: #000;
+        }
+        .social-icons svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+    </style>
+</head>
+<body>
 
-    <!-- Mobile menu. -->
-    <nav class="unslate_co--site-mobile-menu">
-      <div class="close-wrap d-flex">
-        <a href="#" class="d-flex ml-auto js-menu-toggle">
-          <span class="close-label">Close</span>
-          <div class="close-times">
-            <span class="bar1"></span>
-            <span class="bar2"></span>
-          </div>
-        </a>
-      </div>
-      <div class="site-mobile-inner"></div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Site. -->
-    <div class="unslate_co--site-wrap">
-      <div class="unslate_co--site-inner">
-
-      <!-- Menu. -->
-      <nav class="unslate_co--site-nav site-nav-target">
-        <div class="container">
-          <div class="row align-items-center justify-content-between text-center">
-            <div class="col-md-5 text-right">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#timeline-section" class="nav-link">Timeline</a></li>
-              </ul>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Jan Balaguer</h1>
+                <p>Staff Research Engineer at Google DeepMind</p>
             </div>
-            <div class="col-md-5 text-right text-lg-left">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li><a href="#research-section" class="nav-link">Research</a></li>
-              </ul>
-              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-                <li><a href="#" class="js-menu-toggle">Menu</a></li>
-              </ul>
+            <img src="images/jan_balaguer.jpg" alt="Jan Balaguer">
+        </header>
+
+        <section id="about">
+            <h2>About me</h2>
+            <p>I have an education in Telecommunications Engineering and Experimental Psychology. My research spans Reinforcement Learning, Game Theory, Neuroscience, Psychology and Economics.</p>
+            <p>I am native Spanish and Catalan, fluent in English and French, and learning German. I currently live in Berlin (previously in Barcelona, Paris, Oxford, and London).</p>
+            <p>I obsess with anything ... maths, programming, novels, music, photography, investing, macroeconomics, blockchain, videogames, VR, ...</p>
+        </section>
+
+            
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>jdobalaguer [at] gmail [dot] com</p>
+                <p>jan [at] deepmind [dot] com</p>
             </div>
-          </div>
-        </div>
-      </nav>
+        </section>
 
-      <!-- Cover. -->
-      <div class="cover-v1 jarallax bg-light" id="home-section">
-        <div class="container">
-          <div class="row align-items-center">
-              
-            <div class="col-md-8 mx-auto text-center">
-              <h1 class="heading gsap-reveal-hero">Jan Balaguer</h1>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- About section. -->
-      <div class="unslate_co--section" id="about-section">
-        <div class="container">
-          <div class="row mt-5 justify-content-between align-items-center">
-            <div class="col-lg-7 mb-5 mb-lg-0" data-aos="fade-up">
-              <figure class="dotted-bg">
-                <img src="images/jan_balaguer.jpg" alt="Image" class="img-fluid">
-              </figure>
-            </div>
-            <div class="col-lg-5 pl-lg-5" data-aos="fade-up"  data-aos-delay="100">
-              <h3 class="mb-4 heading-h3">About me</h3>
-              <ul class="list-unstyled list-check d-block">
-                <li class="d-block">I am staff <b>Research Engineer</b> at <b>DeepMind</b>.</li>
-                <li class="d-block">I have an education in Telecommunications Engineering and Experimental Psychology.</li>
-                <li class="d-block">My research spans <b>ML</b>, <b>Neuroscience</b>, <b>Psychology</b> and <b>Economics</b>.</li>
-                <li class="d-block">I am native Spanish, fluent in English and French, and practice Catalan with my niece every so often.</li>
-                <li class="d-block">I have a 1-year-old son, Elie.</li>
-                <li class="d-block">I obsess with anything ... maths, programming, novels, music, photography, investing, macroeconomics, blockchain, videogames, and modelling of the head anatomy, and recently view synthesis (gaussian splatting).</li>
-              </ul>
-              <h4 class="mb-4 heading-h4">Contact</h4>
-              <div class="contact-info-v1">
-                <p><span class="contact-info-label">jdobalaguer [at] gmail [dot] com</span></p>
-                <p><span class="contact-info-label">jan [at] deepmind [dot] com</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline section. -->
-      <div class="unslate_co--section" id="timeline-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5"  data-aos="fade-up">
-            <h2 class="heading-h2 text-center divider">Timeline</h2>
-          </div>
-          <div class="col-md-8 mx-auto text-center">
-            <img src="images/timeline.svg" alt="Image" class="img-fluid" width="80%">
-          </div>
-        </div>
-      </div>
-
-      <!-- Research section. -->
-      <div class="unslate_co--section" id="research-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
-            <h2 class="heading-h2 text-center divider">Research</h2>
-          </div>
-          <div class="relative"><div class="loader-research-wrap"><div class="loader-research"></div></div> </div>
-          <div id="research-single-holder"></div>
-          <div class="research-wrapper">
-            <div id="posts" class="row gutter-isotope-item">
-              
-              <!-- Thesis. -->
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="https://ora.ox.ac.uk/objects/uuid:a00e2943-ba63-42de-9bcb-37732d9db3a1" class="research-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>Thesis</h3>
-                        <p>ORA, 2018</p>
-                      </div>
-                    </div>
-                    <img src="images/research/thesis.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-              
-              <!-- Subway. -->
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="https://www.cell.com/neuron/fulltext/S0896-6273(16)30057-5" class="research-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>Subway</h3>
-                        <p>Neuron, 2016</p>
-                      </div>
-                    </div>
-                    <img src="images/research/subway.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-              
-              <!-- Democratic AI. -->
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
-                <a href="https://www.nature.com/articles/s41562-022-01383-x" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>Democratic AI</h3>
-                        <p>Nature Human Behaviour, 2022</p>
-                      </div>
-                    </div>
-                    <img src="images/research/democratic_ai.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-              
-              <!-- PonderNet. -->
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="https://arxiv.org/abs/2107.05407" class="research-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>PonderNet</h3>
-                        <p>arXiv, 2021</p>
-                      </div>
-                    </div>
-                    <img src="images/research/pondernet.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-              
-              <!-- Good Shepherd. -->
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
-                <a href="https://arxiv.org/abs/2202.10135" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>Good Shepherd</h3>
-                        <p>arXiv, 2022</p>
-                      </div>
-                    </div>
-                    <img src="images/research/good_shepherd.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-              
-              <!-- Boring task. -->
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
-                <a href="https://www.cell.com/neuron/fulltext/S0896-6273(16)31011-X" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>Boring task</h3>
-                        <p>Neuron, 2017</p>
-                      </div>
-                    </div>
-                    <img src="images/research/boring_task.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-              
-              <!-- Prospect theory optimality. -->
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
-                <a href="https://www.pnas.org/doi/full/10.1073/pnas.2002232118" class="research-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="research-item-content">
-                        <h3>Prospect theory optimality</h3>
-                        <p>PNAS, 2020</p>
-                      </div>
-                    </div>
-                    <img src="images/research/prospect_theory_optimality.jpg" class="lazyload  img-fluid" alt="Images" width="60%"/>
-                  </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <!-- End of site. -->
-    </div> 
-
-    <!-- Footer with copyright. -->
-    <footer class="unslate_co--footer unslate_co--section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-            <div class="footer-site-logo"><a href="#">Jan Balaguer<span>.</span></a></div>
-            <ul class="list-unstyled social-icons light">
-              <li><a href="https://www.linkedin.com/in/jan-balaguer-93474a164"><span class="icon-linkedin"></span></a></li>
-              <li><a href="https://janbalaguer.wordpress.com"><span class="icon-wordpress"></span></a></li>
-              <li><a href="https://scholar.google.com/citations?user=88xDcnoAAAAJ"><span class="icon-graduation-cap"></span></a></li>
-              <li><a href="https://github.com/jan-balaguer"><span class="icon-github"></span></a></li>
+        <section id="research">
+            <h2>Research</h2>
+            <ul class="research-list">
+                <li><a href="https://arxiv.org/abs/2312.11805">Gemini: A Family of Highly Capable Multimodal Models</a> (2023) - <i>arXiv</i></li>
+                <li><a href="https://www.nature.com/articles/s41562-022-01383-x">Human-centred mechanism design with Democratic AI</a> (2022) - <i>Nature Human Behaviour</i></li>
+                <li><a href="https://arxiv.org/abs/2202.10135">The Good Shepherd: An Oracle Agent for Mechanism Design</a> (2022) - <i>arXiv</i></li>
+                <li><a href="https://arxiv.org/abs/2107.05407">PonderNet: Learning to Ponder</a> (2021) - <i>arXiv</i></li>
+                <li><a href="https://www.pnas.org/doi/full/10.1073/pnas.2002232118">Optimal utility and probability functions for agents with finite computational precision</a> (2020) - <i>PNAS</i></li>
+                <li><a href="https://ora.ox.ac.uk/objects/uuid:a00e2943-ba63-42de-9bcb-37732d9db3a1">Decision-making with hierarchical representations in humans</a> (2018) - <i>Thesis</i></li>
+                <li><a href="https://psycnet.apa.org/buy/2026-64364-001">The Memrise Prize</a> (2025) - <i>Journal of Applied Research in Memory and Cognition</i></li>
+                <li><a href="https://www.cell.com/neuron/fulltext/S0896-6273(16)31011-X">Ventromedial Prefrontal Cortex Encodes a Latent Estimate of Cumulative Reward</a> (2017) - <i>Neuron</i></li>
+                <li><a href="https://www.cell.com/neuron/fulltext/S0896-6273(16)30057-5">Neural Mechanisms of Hierarchical Planning in a Virtual Subway Network</a> (2016) - <i>Neuron</i></li>
             </ul>
-            <p class="site-copyright"><small>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ --> </small></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+        </section>
 
-    <!-- Loader -->
-    <div id="unslate_co--overlayer"></div>
-    <div class="site-loader-wrap">
-      <div class="site-loader"></div>
+        <footer>
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/jan-balaguer-93474a164" title="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://janbalaguer.wordpress.com" title="WordPress">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.05 18.067c-1.848-2.607-2.822-5.748-2.822-8.995 0-.585.038-1.168.11-1.748l4.47 12.449c-.611-.476-1.196-1.056-1.758-1.706zm9.351-12.288c.846 1.488 1.341 3.23 1.341 5.093 0 2.508-1.077 4.887-2.923 6.649l-1.396-4.225 2.978-7.517zm-11.458-1.258c1.313-1.074 2.97-1.721 4.773-1.721 1.637 0 3.167.514 4.451 1.401l-2.031 5.567-2.455-6.805h-.624l-2.607 7.025-1.507-5.463zm3.125 14.659l3.352-9.619 3.033 8.898c-1.424.646-3.003 1.011-4.662 1.011-1.411 0-2.753-.264-4.004-.737l2.281-6.702z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://scholar.google.com/citations?user=88xDcnoAAAAJ" title="Google Scholar">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l12 5.5-12 5.5-12-5.5 12-5.5zm0 13.065l8.966-4.109v5.044c0 2.571-4.276 5-8.966 5-4.69 0-8.966-2.429-8.966-5v-5.044l8.966 4.109z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jan-balaguer" title="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </li>
+            </ul>
+            <p>Jan Balaguer. Copyright &copy; 2026. All Rights Reserved.</p>
+        </footer>
     </div>
 
-    <script src="js/scripts-dist.js"></script>
-    <script src="js/main.js"></script>
-
-  </body>
+</body>
 </html>
